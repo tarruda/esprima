@@ -1960,7 +1960,7 @@ parseYieldExpression: true
             return {
                 type: Syntax.ExportDeclaration,
                 declaration: declaration,
-                'default:' def,
+                'default': def,
                 specifiers: specifiers,
                 source: source
             };

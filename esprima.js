@@ -5414,6 +5414,8 @@ parseYieldExpression: true
             if (typeof extra.errors !== 'undefined') {
                 tokens.errors = extra.errors;
             }
+        } catch (e) {
+            throw e;
         } finally {
             unpatch();
             extra = {};
@@ -5501,6 +5503,8 @@ parseYieldExpression: true
             if (extra.range || extra.loc) {
                 program.body = filterGroup(program.body);
             }
+        } catch (e) {
+            throw e;
         } finally {
             unpatch();
             extra = {};
